@@ -11,7 +11,6 @@ BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON =		\
 	$(PREFIX1).automorf.hfst	\
-	$(PREFIX1).prob		\
 	$(PREFIX1).rlx.bin	\
 	$(PREFIX1).autobil.bin	\
 	$(PREFIX1).autolex.bin	\
@@ -20,12 +19,10 @@ TARGETS_COMMON =		\
 	$(PREFIX1).t2x.bin	\
 	$(PREFIX1).t3x.bin	\
 	$(PREFIX2).automorf.hfst	\
-	$(PREFIX2).prob		\
 	$(PREFIX2).rlx.bin	\
 	$(PREFIX2).autobil.bin	\
 	$(PREFIX2).autolex.bin	\
 	$(PREFIX2).autogen.hfst	\
-	$(PREFIX2).autopgen.hfst	\
 	$(PREFIX2).t1x.bin	\
 	$(PREFIX2).t2x.bin	\
 	$(PREFIX2).t3x.bin
@@ -65,16 +62,6 @@ $(PREFIX2).automorf.hfst: $(AP_SRC2)/$(LANG2).automorf.hfst
 
 $(PREFIX1).autogen.hfst: $(AP_SRC2)/$(LANG2).autogen.hfst
 	cp -v $< $@
-
-###############################################################################
-## Tagger models
-###############################################################################
-
-$(PREFIX1).prob: $(AP_SRC1)/$(LANG1).prob
-	cp $< $@
-
-$(PREFIX2).prob: $(AP_SRC2)/$(LANG2).prob
-	cp $< $@
 
 ###############################################################################
 ## Disambiguation rules
@@ -137,15 +124,6 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 	apertium-validate-postchunk $<
 	apertium-preprocess-transfer $< $@
 
-###############################################################################
-## Postgeneration dictionaries
-###############################################################################
-
-$(PREFIX1).autopgen.hfst: $(AP_SRC2)/$(LANG2).autopgen.hfst
-	cp $< $@
-
-$(PREFIX2).autopgen.hfst: $(AP_SRC1)/$(LANG1).autopgen.hfst
-	cp $< $@
 
 ###############################################################################
 ## Distribution
@@ -180,9 +158,7 @@ apertium_fin_krl_DATA=	\
 	$(BASENAME).$(PREFIX2).t3x
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
-noinst_DATA=modes/$(PREFIX1).mode \
-	.deps/$(LANG1).automorf.hfst \
-	.deps/$(LANG2).automorf.hfst
+noinst_DATA=modes/$(PREFIX1).mode
 
 install-data-local: install-modes
 

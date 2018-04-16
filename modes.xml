@@ -5,8 +5,8 @@
 
   <mode name="fin-krl" install="yes" gendebug="yes">
     <pipeline>
-      <program name="lt-proc -w">
-        <file name="fin-krl.automorf.bin"/>
+      <program name="hfst-proc -w">
+        <file name="fin-krl.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
         <file name="fin-krl.rlx.bin"/>
@@ -33,8 +33,8 @@
         <file name="apertium-fin-krl.fin-krl.t3x"/>
         <file name="fin-krl.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
-        <file name="fin-krl.autogen.bin"/>
+      <program name="hfst-proc $1">
+        <file name="fin-krl.autogen.hfst"/>
       </program>
     </pipeline>
   </mode>
@@ -43,8 +43,8 @@
 
   <mode name="krl-fin" install="yes" gendebug="yes">
     <pipeline>
-      <program name="lt-proc -w">
-        <file name="krl-fin.automorf.bin"/>
+      <program name="hfst-proc -w">
+        <file name="krl-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -w">
         <file name="krl-fin.rlx.bin"/>
@@ -71,8 +71,8 @@
         <file name="apertium-fin-krl.krl-fin.t3x"/>
         <file name="krl-fin.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
-        <file name="krl-fin.autogen.bin"/>
+      <program name="hfst-proc $1">
+        <file name="krl-fin.autogen.hfst"/>
       </program>
     </pipeline>
   </mode>
