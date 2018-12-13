@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionary>
-  <alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệfFgGhHiIíjJkKlLmMnNoOóöớpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+  <alphabet>aAbBcCčČdDeEfFgGhHiIíjJkKlLmMnNoOpPqQrRsSštTuUvVwWxXyYzZžŽäÄöÖ</alphabet>
 
+  <!-- {{{ tags -->
   <sdefs>
-    <sdef n="n"               c="Noun"/>
-    <sdef n="np"              c="Proper noun"/>
-    <sdef n="vblex"           c="Verb, lexical"/>
-    <sdef n="vbmod"           c="Modal verb"/>
-    <sdef n="vaux"            c="Auxiliary verb"/>
-    <sdef n="vbser"           c="'To be' verb"/>
-    <sdef n="vbhaver"         c="'To have' verb"/>
-    <sdef n="cnjsub"          c="Subordinating conjunction"/>
-    <sdef n="cnjcoo"          c="Co-ordinating conjunction"/>
-    <sdef n="cnjadv"          c="Adverbial conjunction"/>
-    <sdef n="pr"              c="Preposition"/>
-    <sdef n="adv"             c="Adverb"/>
-    <sdef n="ij"              c="Interjection"/>
-    <sdef n="adj"             c="Adjective"/>
-    <sdef n="prn"             c="Pronoun"/>
+    <sdef n="n"               c="NOUN"/>
+    <sdef n="np"              c="PROPN"/>
+    <sdef n="vblex"           c="VERB"/>
+    <sdef n="vaux"            c="AUX"/>
+    <sdef n="cnjsub"          c="SCONJ"/>
+    <sdef n="cnjcoo"          c="CCONJ"/>
+    <sdef n="post"            c="ADP"/>
+    <sdef n="adv"             c="ADV"/>
+    <sdef n="ij"              c="INTJ"/>
+    <sdef n="adj"             c="ADJ"/>
+    <sdef n="prn"             c="PRON"/>
+    <sdef n="punct"           c="PUNCT"/>
+    <sdef n="det"             c="DET"/>
+    <sdef n="x"               c="X"/>
+    <sdef n="sym"             c="SYM"/>
+    <sdef n="num"             c="NUM"/>
 
-    <sdef n="attr"            c="Attributive"/>
     <sdef n="top"             c="Toponym"/>
     <sdef n="ant"             c="Anthroponym"/>
     <sdef n="cog"             c="Cognomen"/>
@@ -30,30 +31,26 @@
     <sdef n="ref"             c="Reflexive pronoun"/>
     <sdef n="res"             c="Reciprocal pronoun"/>
 
-    <sdef n="det"             c="Determiner"/>
     <sdef n="pos"             c="Possessive"/>
 
-    <sdef n="p1"              c="1st person"/>
-    <sdef n="p2"              c="2nd person"/>
-    <sdef n="p3"              c="3rd person"/>
+    <sdef n="p1"              c="Person=1"/>
+    <sdef n="p2"              c="Person=2"/>
+    <sdef n="p3"              c="Person=3"/>
 
-    <sdef n="nt"              c="Neuter"/>
-    <sdef n="ut"              c="Utrum"/>
     <sdef n="f"               c="Feminine"/>
     <sdef n="m"               c="Masculine"/>
-    <sdef n="un"              c="No gender"/>
 
-    <sdef n="sg"              c="Singular"/>
-    <sdef n="du"              c="Dual"/>
-    <sdef n="pl"              c="Plural"/>
+    <sdef n="sg"              c="Number=Sing"/>
+    <sdef n="du"              c="Number=Dual"/>
+    <sdef n="pl"              c="Number=Plur"/>
     <sdef n="sp"              c="Singular / plural"/>
 
     <sdef n="ind"             c="Indefinite"/>
     <sdef n="def"             c="Definite"/>
 
-    <sdef n="nom"             c="Nominative"/>
-    <sdef n="acc"             c="Accusative"/>
-    <sdef n="gen"             c="Genitive"/>
+    <sdef n="nom"             c="Case=Nom"/>
+    <sdef n="acc"             c="Case=Acc"/>
+    <sdef n="gen"             c="Case=Gen"/>
 
     <sdef n="dem"             c="Demonstrative"/>
     <sdef n="itg"             c="Question word / interrogative"/>
@@ -79,18 +76,197 @@
     <sdef n="acr"             c="Acronym"/>
     <sdef n="unc"             c="Uncountable"/>
 
-    <sdef n="num"             c="Numeral"/>
-    <sdef n="sent"            c="Sentence end"/>
-    <sdef n="punct"           c="Punctuation"/>
-
     <sdef n="compound-only-L" c="May only be the left-side of a compound"/>
     <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
   </sdefs>
 
-  <section id="main" type="standard">
-    <e><p><l>talo<s n="n"/></l><r>talo<s n="n"/></r></p></e>
+  <!-- }}} -->
 
+  <section id="main" type="standard">
+
+    <!-- }}}
+         {{{ Nouns -->
+    
+    <e><p><l>vieras<s n="n"/></l><r>ativo<s n="n"/></r></p></e>
+    <e><p><l>kansa<s n="n"/></l><r>kanša<s n="n"/></r></p></e>
+    <e><p><l>tarkoitus<s n="n"/></l><r>tarkotuš<s n="n"/></r></p></e>
+    <e><p><l>elvyttäminen<s n="n"/></l><r>elvyttämini<s n="n"/></r></p></e>
+    <e><p><l>kehittäminen<s n="n"/></l><r>kehittämini<s n="n"/></r></p></e>
+    <e><p><l>säilyttäminen<s n="n"/></l><r>šäilyttämini<s n="n"/></r></p></e>
+    <e><p><l>projekti<s n="n"/></l><r>projektu<s n="n"/></r></p></e>
+    <e><p><l>tarinankertoja<s n="n"/></l><r>starinan#kertoja<s n="n"/></r></p></e>
+    <e><p><l>foorumi<s n="n"/></l><r>forumi<s n="n"/></r></p></e>
+    <e><p><l>järjestäjä<s n="n"/></l><r>järještäjä<s n="n"/></r></p></e>
+    <e><p><l>vuotispäivä<s n="n"/></l><r>vuotis#päivä<s n="n"/></r></p></e>
+    <e><p><l>kilpailufestivaali<s n="n"/></l><r>kilpailu#festivali<s n="n"/></r></p></e>
+    <e><p><l>festivaali<s n="n"/></l><r>festivali<s n="n"/></r></p></e>
+    <e><p><l>rahvas<s n="n"/></l><r>rahvaš<s n="n"/></r></p></e>
+    <e><p><l>keskus<s n="n"/></l><r>keškuš<s n="n"/></r></p></e>
+    <e><p><l>seutu<s n="n"/></l><r>šeutu<s n="n"/></r></p></e>
+    <e><p><l>toimeenpano<s n="n"/></l><r>toimeh#pito<s n="n"/></r></p></e>
+    <e><p><l>kansanlliseepos<s n="n"/></l><r>kansan#eepossa<s n="n"/></r></p></e>
+    <e><p><l>rahvaanluomistyö<s n="n"/></l><r>rahvahan#luomis#työ<s n="n"/></r></p></e>
+    <e><p><l>kansansatuteatteri<s n="n"/></l><r>folklori#teatteri<s n="n"/></r></p></e>
+    <e><p><l>tanssi<s n="n"/></l><r>tanšši<s n="n"/></r></p></e>
+    <e><p><l>musiikkiyhtye<s n="n"/></l><r>musiikki#kollektiivi<s n="n"/></r></p></e>
+    <e><p><l>yhtye<s n="n"/></l><r>kollektiivi<s n="n"/></r></p></e>
+    <e><p><l>sooloartisti<s n="n"/></l><r>yksityis#esiintyjä<s n="n"/></r></p></e>
+    <e><p><l>artisti<s n="n"/></l><r>artišta<s n="n"/></r></p></e>
+    <e><p><l>alueilta<s n="n"/></l><r>aloveh#ilta<s n="n"/></r></p></e>
+    <e><p><l>tasavalta<s n="n"/></l><r>taša#valta<s n="n"/></r></p></e>
+    <e><p><l>katsoja<s n="n"/></l><r>kaččoja<s n="n"/></r></p></e>
+    <e><p><l>kutsu<s n="n"/></l><r>kučču<s n="n"/></r></p></e>
+    <e><p><l>osanottaja<s n="n"/></l><r>ošan#ottaja<s n="n"/></r></p></e>
+    <e><p><l>anomus<s n="n"/></l><r>anomuš<s n="n"/></r></p></e>
+    <e><p><l>tulos<s n="n"/></l><r>tuloš<s n="n"/></r></p></e>
+    <e><p><l>osoite<s n="n"/></l><r>atressi<s n="n"/></r></p></e>
+    <e><p><l>sivusto<s n="n"/></l><r>saitti<s n="n"/></r></p></e>
+    <e><p><l>osa<s n="n"/></l><r>oša<s n="n"/></r></p></e>
+    <e><p><l>osasto<s n="n"/></l><r>ošašto<s n="n"/></r></p></e>
+    <e><p><l>lisätieto<s n="n"/></l><r>lisä#tieto<s n="n"/></r></p></e>
+    <e><p><l>osanottaja<s n="n"/></l><r>ošanottaja<s n="n"/></r></p></e>
+    <e><p><l>kesäkuu<s n="n"/></l><r>kešä#kuu<s n="n"/></r></p></e>
+    <e><p><l>huhtikuu<s n="n"/></l><r>šula#kuu<s n="n"/></r></p></e>
+    <e><p><l>sähköposti<s n="n"/></l><r>šähköpošti<s n="n"/></r></p></e>
+    <e><p><l>kansanperinne<s n="n"/></l><r>rahvahan#tapa<s n="n"/></r></p></e>
+    <e><p><l>päätöskonsertti<s n="n"/></l><r>loppu#konsertti<s n="n"/></r></p></e>
+    <e c="ok?"><p><l>kanteleensoittaja<s n="n"/></l><r>guslin#šoittaja<s n="n"/></r></p></e>
+    <e c="ok?"><p><l>ulkovaihe<s n="n"/></l><r>ulko#vaihe<s n="n"/></r></p></e>
+
+    <e><i>talo<s n="n"/></i></e>
+    <e><i>merkki<s n="n"/></i></e>
+    <e><i>esiintyjä<s n="n"/></i></e>
+    <e><i>varajohtaja<s n="n"/></i></e>
+    <e><i>katu<s n="n"/></i></e>
+    <e><i>päivä<s n="n"/></i></e>
+    <e><i>kilpailu<s n="n"/></i></e>
+    <e><i>ohjelma<s n="n"/></i></e>
+    <e><i>vaihe<s n="n"/></i></e>
+    <e><i>video<s n="n"/></i></e>
+    <e><i>laulu<s n="n"/></i></e>
+    <e><i>meininki<s n="n"/></i></e>
+    <e><i>perintö<s n="n"/></i></e>
+    <e><i>raja<s n="n"/></i></e>
+    <e><i>kulttuuri<s n="n"/></i></e>
+    <e><i>folkloristi<s n="n"/></i></e>
+    <e><i>popularisointi<s n="n"/></i></e>
+    <e><i>rekonstruointi<s n="n"/></i></e>
+
+    <!-- }}}
+         {{{ Proper nouns -->
+
+    <e><i>Kalevala<s n="np"/></i></e>
+    <e><i>Venäjä<s n="np"/></i></e>
+    <e><i>Lönnrot<s n="np"/></i></e>
+    <e><i>Elias<s n="np"/></i></e>
+    <e><i>Irina<s n="np"/></i></e>
+    <e><i>Karjala<s n="np"/></i></e>
+    <e><i>Fedosova<s n="np"/></i></e>
+    <e><i>Komi<s n="np"/></i></e>
+    <e><i>Tver<s n="np"/></i></e>
+    <e><i>Mari<s n="np"/></i></e>
+    <e><i>Eli<s n="np"/></i></e>
+    <e><i>Krasnodar<s n="np"/></i></e>
+    <e><i>Saha<s n="np"/></i></e>
+    <e><i>Tula<s n="np"/></i></e>
+    <e><i>Orlov<s n="np"/></i></e>
+    <e><i>Vologda<s n="np"/></i></e>
+    <e><i>Polenov<s n="np"/></i></e>
+    <e><i>Petroskoi<s n="np"/></i></e>
+    <e><i>Murmanšk<s n="np"/></i></e>
+    <e><i>Lenin<s n="np"/></i></e>
+    <e><i>Tatjana<s n="np"/></i></e>
+    <e><i>Aleksandrovna<s n="np"/></i></e>
+
+    <e><i>KT<s n="np"/></i></e>
+
+    <e><p><l>Aunus<s n="np"/></l><r>Aunuš<s n="np"/></r></p></e>
+    <e><p><l>Moskova<s n="np"/></l><r>Moškova<s n="np"/></r></p></e>
+    <e><p><l>Lednova<s n="np"/></l><r>Ledn’ova<s n="np"/></r></p></e>
+    <e><p><l>Arkangel<s n="np"/></l><r>Arhankeli<s n="np"/></r></p></e>
+    <e><p><l>Udmurtia<s n="np"/></l><r>Udmurtija<s n="np"/></r></p></e>
+    <e><p><l>Jakut<s n="np"/></l><r>Jakutija<s n="np"/></r></p></e>
+    
+    <!-- }}}
+         {{{ Verbs -->
+
+    
+    <e><p><l>ilmoittaa<s n="vblex"/></l><r>ilmottoa<s n="vblex"/></r></p></e>
+    <e><p><l>järjestää<s n="vblex"/></l><r>järješteä<s n="vblex"/></r></p></e>
+    <e><p><l>korostaa<s n="vblex"/></l><r>koroštoa<s n="vblex"/></r></p></e>
+    <e><p><l>kutsua<s n="vblex"/></l><r>kuččuo<s n="vblex"/></r></p></e>
+    <e><p><l>lähettää<s n="vblex"/></l><r>työnteä<s n="vblex"/></r></p></e>
+    <e><p><l>nimetä<s n="vblex"/></l><r>nimetä<s n="vblex"/></r></p></e>
+    <e><p><l>nähdä<s n="vblex"/></l><r>nähä<s n="vblex"/></r></p></e>
+    <e><p><l>olla<s n="vaux"/></l><r>olla<s n="vaux"/></r></p></e>
+    <e><p><l>olla<s n="vblex"/></l><r>olla<s n="vblex"/></r></p></e>
+    <e><p><l>omistaa<s n="vblex"/></l><r>omistoa<s n="vblex"/></r></p></e>
+    <e><p><l>ottaa<s n="vblex"/></l><r>ottoa<s n="vblex"/></r></p></e>
+    <e><p><l>saada<s n="vblex"/></l><r>suaha<s n="vblex"/></r></p></e>
+    <e><p><l>tulla<s n="vblex"/></l><r>tulla<s n="vblex"/></r></p></e>
+    <e><p><l>toivoa<s n="vblex"/></l><r>toivuo<s n="vblex"/></r></p></e>
+    <e><p><l>vastata<s n="vblex"/></l><r>vaššata<s n="vblex"/></r></p></e>
+    <e><p><l>vierailla<s n="vblex"/></l><r>ativoija<s n="vblex"/></r></p></e>
+
+    <!-- }}}
+         {{{ Adjectives -->
+
+    <e><p><l>eeppinen<s n="adj"/></l><r>eeppini<s n="adj"/></r></p></e>
+    <e><p><l>kansallinen<s n="adj"/></l><r>kanšallini<s n="adj"/></r></p></e>
+    <e><p><l>vanhanaikainen<s n="adj"/></l><r>vanhan#aikane<s n="adj"/></r></p></e>
+    <e><p><l>ensimmäinen<s n="adj"/></l><r>enšimmäini<s n="adj"/></r></p></e>
+    <e><p><l>valtiollinen<s n="adj"/></l><r>valtijollini<s n="adj"/></r></p></e>
+    <e><p><l>omatoiminen<s n="adj"/></l><r>omatoimini<s n="adj"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/></l><r>hyvä<s n="adj"/></r></p></e>
+    <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
+
+    <!-- }}}
+         {{{ Adverbs -->
+
+    <e><p><l>jo<s n="adv"/></l><r>jo<s n="adv"/></r></p></e>
+
+    <!-- }}}
+         {{{ Prononuns -->
+
+    <e><p><l>koko<s n="prn"/></l><r>koko<s n="prn"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/></l><r>mi<s n="prn"/></r></p></e>
+    <e><p><l>se<s n="prn"/></l><r>še<s n="prn"/></r></p></e>
+    <e><p><l>me<s n="prn"/></l><r>myö<s n="prn"/></r></p></e>
+
+
+    <!-- }}}
+         {{{ Adpositions -->
+
+    <e><p><l>luona<s n="post"/></l><r>luona<s n="post"/></r></p></e>
+    <e><p><l>kera<s n="post"/></l><r>kera<s n="post"/></r></p></e>
+    <e><p><l>asti<s n="post"/></l><r>šuaten<s n="post"/></r></p></e>
+
+    <!-- }}}
+         {{{ Conjunctions -->
+
+    <e><p><l>ja<s n="cnjcoo"/></l><r>ta<s n="cnjcoo"/></r></p></e>
+    <e><p><l>tai<s n="cnjcoo"/></l><r>tahi<s n="cnjcoo"/></r></p></e>
+    <e><p><l>sekä<s n="cnjcoo"/></l><r>šekä<s n="cnjcoo"/></r></p></e>
+    <e><p><l>jotta<s n="cnjsub"/></l><r>jotta<s n="cnjsub"/></r></p></e>
+
+    <!-- }}}
+         {{{ Puncts -->
+    
+    <e><p><l>-<s n="punct"/></l><r>-<s n="punct"/></r></p></e>
+    <e><p><l>–<s n="punct"/></l><r>–<s n="punct"/></r></p></e>
     <e><p><l>.<s n="punct"/></l><r>.<s n="punct"/></r></p></e>
+    <e><p><l>..<s n="punct"/></l><r>..<s n="punct"/></r></p></e>
+    <e><p><l>,<s n="punct"/></l><r>,<s n="punct"/></r></p></e>
+    <e><p><l>:<s n="punct"/></l><r>:<s n="punct"/></r></p></e>
+    <e><p><l>(<s n="punct"/></l><r>(<s n="punct"/></r></p></e>
+    <e><p><l>)<s n="punct"/></l><r>)<s n="punct"/></r></p></e>
+    <e><p><l>”<s n="punct"/></l><r>”<s n="punct"/></r></p></e>
+    <e><p><l>”<s n="punct"/></l><r>“<s n="punct"/></r></p></e>
+
+    <!-- }}}
+         {{{ digitstuff -->
+
+    <e><re>[0-9][0-9]*</re><i><s n="num"/></i></e>
 
   </section>
 </dictionary>
