@@ -36,6 +36,10 @@
     <sdef n="p1"              c="Person=1"/>
     <sdef n="p2"              c="Person=2"/>
     <sdef n="p3"              c="Person=3"/>
+    
+    <sdef n="px1sg"              c="Person[psor]=1"/>
+    <sdef n="px2sg"              c="Person[psor]=2"/>
+    <sdef n="px3sp"              c="Person[psor]=3"/>
 
     <sdef n="f"               c="Feminine"/>
     <sdef n="m"               c="Masculine"/>
@@ -71,6 +75,8 @@
     <sdef n="pst"             c="Positive"/>
     <sdef n="comp"            c="Comparative"/>
     <sdef n="sup"             c="Superlative"/>
+    
+    <sdef n="refl"            c="Reflex=Yes"/>
 
     <sdef n="ord"             c="Ordinal"/>
     <sdef n="acr"             c="Acronym"/>
@@ -130,6 +136,7 @@
     <e><p><l>nauru<s n="n"/></l><r>nakru<s n="n"/></r></p></e>
     <e><p><l>oksa<s n="n"/></l><r>okša<s n="n"/></r></p></e>
     <e><p><l>olkapää<s n="n"/></l><r>olka#piä<s n="n"/></r></p></e>
+    <e><p><l>olkapää<s n="n"/></l><r>olka-piä<s n="n"/></r></p></e>
     <e><p><l>osanottaja<s n="n"/></l><r>ošan#ottaja<s n="n"/></r></p></e>
     <e><p><l>osanottaja<s n="n"/></l><r>ošanottaja<s n="n"/></r></p></e>
     <e><p><l>osa<s n="n"/></l><r>oša<s n="n"/></r></p></e>
@@ -249,8 +256,8 @@
     <e><p><l>olla<s n="vaux"/></l><r>olla<s n="vaux"/></r></p></e>
     <e><p><l>voida<s n="vaux"/></l><r>voija<s n="vaux"/></r></p></e>
     <e><p><l>ei<s n="vaux"/></l><r>ei<s n="vaux"/></r></p></e>
+    <e><p><l>alkaa<s n="vaux"/></l><r>alkoa<s n="vblex"/></r></p></e>
     
-    <e><p><l>alkaa<s n="vblex"/></l><r>alkoa<s n="vblex"/></r></p></e>
     <e><p><l>viedä<s n="vblex"/></l><r>viijä<s n="vblex"/></r></p></e>
     <e><p><l>astua<s n="vblex"/></l><r>aštuo<s n="vblex"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>eččie<s n="vblex"/></r></p></e>
@@ -275,7 +282,7 @@
     <e><p><l>jäädä<s n="vblex"/></l><r>jiähä<s n="vblex"/></r></p></e>
     <e><p><l>katsahtaa<s n="vblex"/></l><r>kačahtoa<s n="vblex"/></r></p></e>
     <e><p><l>kantaa<s n="vblex"/></l><r>kantoa<s n="vblex"/></r></p></e>
-    <e><p><l>keritä<s n="vblex"/></l><r>keritä<s n="vblex"/></r></p></e>
+    <e><p><l>kerätä<s n="vblex"/></l><r>keritä<s n="vblex"/></r></p></e>
     <e><p><l>kertoa<s n="vblex"/></l><r>kertuo<s n="vblex"/></r></p></e>
     <e><p><l>kerätä<s n="vblex"/></l><r>kerätä<s n="vblex"/></r></p></e>
     <e><p><l>kiinnostaa<s n="vblex"/></l><r>kiinnostuo<s n="vblex"/></r></p></e>
@@ -302,7 +309,7 @@
     <e><p><l>sattua<s n="vblex"/></l><r>sattuo<s n="vblex"/></r></p></e>
     <e><p><l>pureskella<s n="vblex"/></l><r>pureškella<s n="vblex"/></r></p></e>
     <e><p><l>nousta<s n="vblex"/></l><r>noušša<s n="vblex"/></r></p></e>
-    <e><p><l>ruveta<s n="vblex"/></l><r>ruveta<s n="vblex"/></r></p></e>
+    <e><p><l>ruveta<s n="vaux"/></l><r>ruveta<s n="vblex"/></r></p></e>
     <e><p><l>laatia<s n="vblex"/></l><r>luatie<s n="vblex"/></r></p></e>
     <e><p><l>täyttyä<s n="vblex"/></l><r>täyttyä<s n="vblex"/></r></p></e>
     <e><p><l>lepäillä<s n="vblex"/></l><r>levähellä<s n="vblex"/></r></p></e>
@@ -336,7 +343,6 @@
     <e><p><l>omatoiminen<s n="adj"/></l><r>omatoimini<s n="adj"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>hyvä<s n="adj"/></r></p></e>
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
-    <e><p><l>eräs<s n="adj"/></l><r>eryäs<s n="adj"/></r></p></e>
     <e><p><l>hieno<s n="adj"/></l><r>hieno<s n="adj"/></r></p></e>
     <e><p><l>kapea<s n="adj"/></l><r>kaitani<s n="adj"/></r></p></e>
     <e><p><l>kannettava<s n="adj"/></l><r>kannettava<s n="adj"/></r></p></e>
@@ -357,6 +363,8 @@
     <e><p><l>terävä<s n="adj"/></l><r>terväni<s n="adj"/></r></p></e>
     <e><p><l>loppu<s n="adj"/></l><r>loppuni<s n="adj"/></r></p></e>
 
+    <e><p><l>eräs<s n="prn"/></l><r>eryäs<s n="adj"/><s n="pos"/></r></p></e>
+    
     <!-- }}}
          {{{ Adverbs -->
 
@@ -372,7 +380,7 @@
     <e><p><l>kuitenkin<s n="adv"/></l><r>kuiteški<s n="adv"/></r></p></e>
     <e><p><l>tiukkaan<s n="adv"/></l><r>lujah<s n="adv"/></r></p></e>
     <e><p><l>kai<s n="adv"/></l><r>vet<s n="adv"/></r></p></e>
-    <e><p><l>mielelläni<s n="adv"/></l><r>mielelläni<s n="adv"/></r></p></e>
+    <e><p><l>mielellään<s n="adv"/><s n="px1sg"/></l><r>mielelläni<s n="adv"/></r></p></e>
     <e><p><l>lämpimästi<s n="adv"/></l><r>lämpimäšti<s n="adv"/></r></p></e>
     <e><p><l>varalta<s n="adv"/></l><r>varalta<s n="adv"/></r></p></e>
     <e><p><l>vain<s n="adv"/></l><r>vain<s n="adv"/></r></p></e>
@@ -382,7 +390,7 @@
     <e><p><l>melkein<s n="adv"/></l><r>melkein<s n="adv"/></r></p></e>
     <e><p><l>seassa<s n="adv"/></l><r>šejašša<s n="adv"/></r></p></e>
     <e><p><l>täysin<s n="adv"/></l><r>täyšin<s n="adv"/></r></p></e>
-    <e><p><l>mielellään<s n="adv"/></l><r>mielelläh<s n="adv"/></r></p></e>
+    <e><p><l>mielellään<s n="adv"/><s n="px3sp"/></l><r>mielelläh<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>ruttoh<s n="adv"/></r></p></e>
     <e><p><l>vähän<s n="adv"/></l><r>vähäšen<s n="adv"/></r></p></e>
     <e><p><l>vielä<s n="adv"/></l><r>vielä<s n="adv"/></r></p></e>
@@ -406,18 +414,19 @@
          {{{ Prononuns -->
 
     <e><p><l>koko<s n="prn"/></l><r>koko<s n="prn"/></r></p></e>
-    <e><p><l>mikä<s n="prn"/></l><r>mi<s n="prn"/></r></p></e>
-    <e><p><l>se<s n="prn"/></l><r>še<s n="prn"/></r></p></e>
-    <e><p><l>ne<s n="prn"/></l><r>ne<s n="prn"/></r></p></e>
-    <e><p><l>minä<s n="prn"/></l><r>mie<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>hiän<s n="prn"/></r></p></e>
-    <e><p><l>me<s n="prn"/></l><r>myö<s n="prn"/></r></p></e>
-    <e><p><l>he<s n="prn"/></l><r>hyö<s n="prn"/></r></p></e>
-    <e><p><l>itse<s n="prn"/></l><r>iče<s n="prn"/></r></p></e>
-    <e><p><l>kaikki<s n="prn"/></l><r>kaikki<s n="prn"/></r></p></e>
+    <e><p><l>se<s n="prn"/></l><r>še<s n="prn"/><s n="dem"/></r></p></e>
+    <e><p><l>ne<s n="prn"/></l><r>ne<s n="prn"/><s n="dem"/></r></p></e>
+    <e><p><l>minä<s n="prn"/></l><r>mie<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
+    <e><p><l>hän<s n="prn"/></l><r>hiän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
+    <e><p><l>me<s n="prn"/></l><r>myö<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
+    <e><p><l>he<s n="prn"/></l><r>hyö<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></r></p></e>
+    <e><p><l>itse<s n="prn"/></l><r>iče<s n="prn"/><s n="refl"/></r></p></e>
+    <e><p><l>kaikki<s n="prn"/></l><r>kaikki<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>molemmat<s n="prn"/></l><r>molompi<s n="prn"/></r></p></e>
-    <e><p><l>tämä<s n="prn"/></l><r>tämä<s n="prn"/></r></p></e>
+    <e><p><l>tämä<s n="prn"/></l><r>tämä<s n="prn"/><s n="dem"/></r></p></e>
 
+    <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="pl"/></r></p></e>
 
     <!-- }}}
          {{{ Adpositions -->
@@ -427,7 +436,7 @@
     <e><p><l>kera<s n="post"/></l><r>kera<s n="post"/></r></p></e>
     <e><p><l>asti<s n="post"/></l><r>šuaten<s n="post"/></r></p></e>
     <e><p><l>jälkeen<s n="post"/></l><r>jälkeh<s n="post"/></r></p></e>
-    <e><p><l>mukana<s n="post"/></l><r>kerallah<s n="post"/></r></p></e>
+    <e><p><l>mukaan<s n="post"/></l><r>kerallah<s n="post"/></r></p></e>
     <e><p><l>luo<s n="post"/></l><r>luo<s n="post"/></r></p></e>
     <e><p><l>päässä<s n="post"/></l><r>piäššä<s n="post"/></r></p></e>
 
