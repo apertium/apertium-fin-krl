@@ -1,43 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transfer default="chunk">
   <section-def-cats>
-    <def-cat n="nom">
+    <def-cat n="noun">
       <cat-item tags="n.*"/>
     </def-cat>
-    <def-cat n="sent">
-      <cat-item tags="sent"/>
+    <def-cat n="inf">
+      <cat-item tags="vblex.inf.*"/>
+      <cat-item tags="vaux.inf.*"/>
+    </def-cat>
+    <def-cat n="infa">
+      <cat-item tags="vblex.inf"/>
+      <cat-item tags="vaux.inf"/>
+    </def-cat>
+    <def-cat n="punct">
+      <cat-item tags="punct"/>
     </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_cas">
+    <def-attr n="verbtype">
+      <attr-item tags="vblex"/>
+      <attr-item tags="vaux"/>
+    </def-attr>
+    <def-attr n="case">
       <attr-item tags="nom"/>
+      <attr-item tags="par"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="ess"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="tra"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="abl"/>
+      <attr-item tags="all"/>
+    </def-attr>
+    <def-attr n="number">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="infform">
+      <attr-item tags="inf"/>
+      <attr-item tags="infa"/>
+      <attr-item tags="infma"/>
+      <attr-item tags="infe"/>
+    </def-attr>
+    <def-attr n="possessive">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sp"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
     </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="number"/>
+    <def-var n="maybe"/>
   </section-def-vars>
 
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="infmangler1" npar="1">
+      <choose>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="sl" part="infform"/><lit-tag v="inf"/></equal>
+              <equal><clip pos="1" side="sl" part="case"/><lit-tag v="ill"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="infform"/><lit-tag v="infma"/></let>
+        </when>
+        <when>
+          <test>
+            <and>
+              <equal><clip pos="1" side="sl" part="infform"/><lit-tag v="inf"/></equal>
+              <equal><clip pos="1" side="sl" part="case"/><lit-tag v="ine"/></equal>
+            </and>
+          </test>
+          <let><clip pos="1" side="tl" part="infform"/><lit-tag v="infe"/></let>
+          </when>
+          <otherwise>
+            <let><clip pos="1" side="tl" part="infform"/><lit-tag v="infa"/></let>
+            <let><clip pos="1" side="tl" part="number"/><lit-tag v="sg"/></let>
+            <let><clip pos="1" side="tl" part="case"/><lit-tag v="lat"/></let>
+          </otherwise>
+      </choose>
     </def-macro>
   </section-def-macros>
 
   <section-rules>
-    <rule comment="REGLA: SENT">
+    <rule comment="infa only: -> sg.lat">
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="infa"/>
       </pattern>
       <action>
         <out>
-          <chunk name="sent" case="caseFirstWord">
+          <chunk name="inf" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SENT"/></tag>
+              <tag><lit-tag v="INFA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="verbtype"/>
+              <lit-tag v="actv.infa.sg.lat"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="infs: map cases and so">
+      <pattern>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <call-macro n="infmangler1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="inf" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="verbtype"/>
+              <lit-tag v="actv"/>
+              <clip pos="1" side="tl" part="infform"/>
+              <lit-tag v="sg"/>
+              <clip pos="1" side="tl" part="case"/>
+              <clip pos="1" side="tl" part="possessive"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="puncts fallback: copy">
+      <pattern>
+        <pattern-item n="punct"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="punct" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PUNCT"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
