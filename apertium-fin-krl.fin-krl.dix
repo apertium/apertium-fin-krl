@@ -78,6 +78,7 @@
 
     <sdef n="compound-only-L" c="May only be the left-side of a compound"/>
     <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
+    <sdef n="use_blacklist"   c="apertium-fin hacks"/>
   </sdefs>
 
   <!-- }}} -->
@@ -86,25 +87,30 @@
 
     <!-- }}}
          {{{ Nouns -->
-    
+
     <e c="ok?"><p><l>kanteleensoittaja<s n="n"/></l><r>guslin#šoittaja<s n="n"/></r></p></e>
     <e c="ok?"><p><l>ulkovaihe<s n="n"/></l><r>ulko#vaihe<s n="n"/></r></p></e>
     <e><p><l>aamu<s n="n"/></l><r>huomeneš<s n="n"/></r></p></e>
     <e><p><l>alueilta<s n="n"/></l><r>aloveh#ilta<s n="n"/></r></p></e>
+    <e><p><l>alue<s n="n"/></l><r>aloveh<s n="n"/></r></p></e>
     <e><p><l>anomus<s n="n"/></l><r>anomuš<s n="n"/></r></p></e>
+    <e><p><l>artisti<s n="n"/></l><r>artista<s n="n"/></r></p></e>
     <e><p><l>artisti<s n="n"/></l><r>artišta<s n="n"/></r></p></e>
     <e><p><l>astia<s n="n"/></l><r>aštie<s n="n"/></r></p></e>
     <e><p><l>elvyttäminen<s n="n"/></l><r>elvyttämini<s n="n"/></r></p></e>
     <e><p><l>eväs<s n="n"/></l><r>eväš<s n="n"/></r></p></e>
+    <e><p><l>-festivaali<s n="n"/></l><r>-festivali<s n="n"/></r></p></e>
     <e><p><l>festivaali<s n="n"/></l><r>festivali<s n="n"/></r></p></e>
     <e><p><l>foorumi<s n="n"/></l><r>forumi<s n="n"/></r></p></e>
     <e><p><l>huhtikuu<s n="n"/></l><r>šula#kuu<s n="n"/></r></p></e>
     <e><p><l>isä<s n="n"/></l><r>tuatto<s n="n"/></r></p></e>
     <e><p><l>järjestäjä<s n="n"/></l><r>järještäjä<s n="n"/></r></p></e>
-    <e><p><l>kansanlliseepos<s n="n"/></l><r>kansan#eepossa<s n="n"/></r></p></e>
+    <e><p><l>kansalliseepos<s n="n"/></l><r>kansan#eepossa<s n="n"/></r></p></e>
+    <e><p><l>kansanluomistyö<s n="n"/></l><r>rahvahan#luomis#työ<s n="n"/></r></p></e>
     <e><p><l>kansanperinne<s n="n"/></l><r>rahvahan#tapa<s n="n"/></r></p></e>
     <e><p><l>kansansatuteatteri<s n="n"/></l><r>folklori#teatteri<s n="n"/></r></p></e>
     <e><p><l>kansa<s n="n"/></l><r>kanša<s n="n"/></r></p></e>
+    <e><p><l>kansa<s n="n"/></l><r>rahvaš<s n="n"/></r></p></e>
     <e><p><l>katsoja<s n="n"/></l><r>kaččoja<s n="n"/></r></p></e>
     <e><p><l>kehittäminen<s n="n"/></l><r>kehittämini<s n="n"/></r></p></e>
     <e><p><l>kertomus<s n="n"/></l><r>kertomuš<s n="n"/></r></p></e>
@@ -124,6 +130,7 @@
     <e><p><l>lehti<s n="n"/></l><r>lehti<s n="n"/></r></p></e>
     <e><p><l>lisätieto<s n="n"/></l><r>lisä#tieto<s n="n"/></r></p></e>
     <e><p><l>marja<s n="n"/></l><r>marju<s n="n"/></r></p></e>
+    <e><p><l>-merkki<s n="n"/></l><r>-merkki<s n="n"/></r></p></e>
     <e><p><l>metsätie<s n="n"/></l><r>meččä#tie<s n="n"/></r></p></e>
     <e><p><l>musiikkiyhtye<s n="n"/></l><r>musiikki#kollektiivi<s n="n"/></r></p></e>
     <e><p><l>mätäs<s n="n"/></l><r>mätäš<s n="n"/></r></p></e>
@@ -138,12 +145,12 @@
     <e><p><l>paikka<s n="n"/></l><r>paikka<s n="n"/></r></p></e>
     <e><p><l>pieksu<s n="n"/></l><r>piekšu<s n="n"/></r></p></e>
     <e><p><l>poiminta<s n="n"/></l><r>poimenta<s n="n"/></r></p></e>
+    <e><p><l>-projekti<s n="n"/></l><r>-projekta<s n="n"/></r></p></e>
     <e><p><l>projekti<s n="n"/></l><r>projektu<s n="n"/></r></p></e>
     <e><p><l>pää<s n="n"/></l><r>piä<s n="n"/></r></p></e>
     <e><p><l>päätöskonsertti<s n="n"/></l><r>loppu#konsertti<s n="n"/></r></p></e>
-    <e><p><l>rahvaanluomistyö<s n="n"/></l><r>rahvahan#luomis#työ<s n="n"/></r></p></e>
-    <e><p><l>rahvas<s n="n"/></l><r>rahvaš<s n="n"/></r></p></e>
     <e><p><l>seutu<s n="n"/></l><r>šeutu<s n="n"/></r></p></e>
+    <e><p><l>-sivusto<s n="n"/></l><r>-saitti<s n="n"/></r></p></e>
     <e><p><l>sivusto<s n="n"/></l><r>saitti<s n="n"/></r></p></e>
     <e><p><l>sooloartisti<s n="n"/></l><r>yksityis#esiintyjä<s n="n"/></r></p></e>
     <e><p><l>suo<s n="n"/></l><r>šuo<s n="n"/></r></p></e>
@@ -169,11 +176,13 @@
     <e><p><l>virsta<s n="n"/></l><r>viršša<s n="n"/></r></p></e>
     <e><p><l>vitsa<s n="n"/></l><r>vičča<s n="n"/></r></p></e>
     <e><p><l>vuotispäivä<s n="n"/></l><r>vuotis#päivä<s n="n"/></r></p></e>
+    <e><p><l>-vuotispäivä<s n="n"/></l><r>-vuotis#päivä<s n="n"/></r></p></e>
     <e><p><l>yhtye<s n="n"/></l><r>kollektiivi<s n="n"/></r></p></e>
     <e><p><l>-äiti<s n="n"/></l><r>-muamo<s n="n"/></r></p></e>
     <e><p><l>äiti<s n="n"/></l><r>muamo<s n="n"/></r></p></e>
 
     <e><i>aika<s n="n"/></i></e>
+    <e><i>vaihe<s n="n"/></i></e>
     <e><i>matka<s n="n"/></i></e>
     <e><i>puoli<s n="n"/></i></e>
     <e><i>koti<s n="n"/></i></e>
@@ -221,7 +230,6 @@
     <e><i>Komi<s n="np"/></i></e>
     <e><i>Tver<s n="np"/></i></e>
     <e><i>Mari<s n="np"/></i></e>
-    <e><i>Eli<s n="np"/></i></e>
     <e><i>Krasnodar<s n="np"/></i></e>
     <e><i>Saha<s n="np"/></i></e>
     <e><i>Tula<s n="np"/></i></e>
@@ -229,27 +237,33 @@
     <e><i>Vologda<s n="np"/></i></e>
     <e><i>Polenov<s n="np"/></i></e>
     <e><i>Petroskoi<s n="np"/></i></e>
-    <e><i>Murmanšk<s n="np"/></i></e>
     <e><i>Lenin<s n="np"/></i></e>
     <e><i>Tatjana<s n="np"/></i></e>
     <e><i>Aleksandrovna<s n="np"/></i></e>
 
     <e><i>KT<s n="np"/></i></e>
 
+    <!-- translittered or translated -->
+
     <e><p><l>Aunus<s n="np"/></l><r>Aunuš<s n="np"/></r></p></e>
+    <e><p><l>Murmansk<s n="np"/></l><r>Murmanšk<s n="np"/></r></p></e>
     <e><p><l>Moskova<s n="np"/></l><r>Moškova<s n="np"/></r></p></e>
     <e><p><l>Lednova<s n="np"/></l><r>Ledn’ova<s n="np"/></r></p></e>
-    <e><p><l>Arkangel<s n="np"/></l><r>Arhankeli<s n="np"/></r></p></e>
+    <e><p><l>Arkangeli<s n="np"/></l><r>Arhankeli<s n="np"/></r></p></e>
     <e><p><l>Udmurtia<s n="np"/></l><r>Udmurtija<s n="np"/></r></p></e>
     <e><p><l>Jakut<s n="np"/></l><r>Jakutija<s n="np"/></r></p></e>
-    
+
+    <!-- tricky stuff -->
+
+    <e><p><l>Eli<s n="np"/><s n="ant"/><s n="use_blacklist"/></l><r>Eli<s n="np"/><s n="top"/></r></p></e>
+
     <!-- }}}
          {{{ Verbs -->
 
     <e><p><l>olla<s n="vaux"/></l><r>olla<s n="vaux"/></r></p></e>
     <e><p><l>voida<s n="vaux"/></l><r>voija<s n="vaux"/></r></p></e>
     <e><p><l>ei<s n="vaux"/></l><r>ei<s n="vaux"/></r></p></e>
-    
+
     <e><p><l>alkaa<s n="vblex"/></l><r>alkoa<s n="vblex"/></r></p></e>
     <e><p><l>viedä<s n="vblex"/></l><r>viijä<s n="vblex"/></r></p></e>
     <e><p><l>astua<s n="vblex"/></l><r>aštuo<s n="vblex"/></r></p></e>
@@ -318,11 +332,13 @@
     <e><p><l>roikkua<s n="vblex"/></l><r>roikkuo<s n="vblex"/></r></p></e>
     <e><p><l>kantaa<s n="vblex"/></l><r>kantua<s n="vblex"/></r></p></e>
     <e><p><l>kummastella<s n="vblex"/></l><r>kummekšie<s n="vblex"/></r></p></e>
+    <e><p><l>tanssia<s n="vblex"/></l><r>tanššie<s n="vblex"/></r></p></e>
 
     <!-- }}}
          {{{ Adjectives -->
 
     <e><p><l>täysi<s n="adj"/></l><r>täyši<s n="adj"/></r></p></e>
+    <e><p><l>omistettu<s n="adj"/></l><r>omissettu<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>pieni<s n="adj"/></r></p></e>
     <e><p><l>pikkuinen<s n="adj"/></l><r>pikkaraini<s n="adj"/></r></p></e>
     <e><p><l>kippuranokkainen<s n="adj"/></l><r>kippuranokkaini<s n="adj"/></r></p></e>
@@ -447,7 +463,7 @@
 
     <!-- }}}
          {{{ Puncts -->
-    
+
     <e><p><l>-<s n="punct"/></l><r>-<s n="punct"/></r></p></e>
     <e><p><l>–<s n="punct"/></l><r>–<s n="punct"/></r></p></e>
     <e><p><l>.<s n="punct"/></l><r>.<s n="punct"/></r></p></e>
@@ -458,7 +474,7 @@
     <e><p><l>)<s n="punct"/></l><r>)<s n="punct"/></r></p></e>
     <e><p><l>”<s n="punct"/></l><r>”<s n="punct"/></r></p></e>
     <e><p><l>”<s n="punct"/></l><r>“<s n="punct"/></r></p></e>
-    
+
     <!-- }}}
          {{{ numerals -->
 
@@ -466,11 +482,12 @@
     <e><p><l>kaksi<s n="num"/></l><r>kakši<s n="num"/></r></p></e>
     <e><p><l>neljä<s n="num"/></l><r>n’el’l’ä<s n="num"/></r></p></e>
     <e><p><l>kahdeksan<s n="num"/></l><r>kahekšan<s n="num"/></r></p></e>
-    
+
     <!-- }}}
          {{{ digitstuff -->
 
     <e><re>[0-9][0-9]*</re><i><s n="num"/></i></e>
+    <e><re>[0-9][0-9]*</re><i>.<s n="adj"/></i></e>
 
   </section>
 </dictionary>
