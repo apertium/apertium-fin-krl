@@ -238,7 +238,6 @@
     <e><i>Tver<s n="np"/></i></e>
     <e><i>Mari<s n="np"/></i></e>
     <e><i>Krasnodar<s n="np"/></i></e>
-    <e><i>Saha<s n="np"/></i></e>
     <e><i>Tula<s n="np"/></i></e>
     <e><i>Orlov<s n="np"/></i></e>
     <e><i>Vologda<s n="np"/></i></e>
@@ -258,11 +257,12 @@
     <e><p><l>Lednova<s n="np"/></l><r>Ledn’ova<s n="np"/></r></p></e>
     <e><p><l>Arkangeli<s n="np"/></l><r>Arhankeli<s n="np"/></r></p></e>
     <e><p><l>Udmurtia<s n="np"/></l><r>Udmurtija<s n="np"/></r></p></e>
-    <e><p><l>Jakut<s n="np"/></l><r>Jakutija<s n="np"/></r></p></e>
+    <e><p><l>Jakutia<s n="np"/></l><r>Jakutija<s n="np"/></r></p></e>
 
     <!-- tricky stuff -->
 
     <e><p><l>Eli<s n="np"/><s n="ant"/><s n="use_blacklist"/></l><r>Eli<s n="np"/><s n="top"/></r></p></e>
+    <e><p><l>Saha<s n="np"/><s n="top"/><s n="use_blacklist"/></l><r>Saha<s n="np"/><s n="top"/></r></p></e>
 
     <!-- }}}
          {{{ Verbs -->
@@ -270,11 +270,11 @@
     <e><p><l>olla<s n="vaux"/></l><r>olla<s n="vaux"/></r></p></e>
     <e><p><l>voida<s n="vaux"/></l><r>voija<s n="vaux"/></r></p></e>
     <e><p><l>ei<s n="vaux"/></l><r>ei<s n="vaux"/></r></p></e>
-
-    <e><p><l>alkaa<s n="vblex"/></l><r>alkoa<s n="vblex"/></r></p></e>
     <e><p><l>alkaa<s n="vaux"/></l><r>alkoa<s n="vblex"/></r></p></e>
 
+
     <e><p><l>viedä<s n="vblex"/></l><r>viijä<s n="vblex"/></r></p></e>
+    <e><p><l>alkaa<s n="vblex"/></l><r>alkoa<s n="vblex"/></r></p></e>
     <e><p><l>astua<s n="vblex"/></l><r>aštuo<s n="vblex"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>eččie<s n="vblex"/></r></p></e>
     <e><p><l>ilmoittaa<s n="vblex"/></l><r>ilmottoa<s n="vblex"/></r></p></e>
@@ -431,7 +431,7 @@
     <!-- }}}
          {{{ Prononuns -->
 
-    <e><p><l>koko<s n="prn"/></l><r>koko<s n="prn"/></r></p></e>
+    <e><p><l>koko<s n="prn"/></l><r>koko<s n="prn"/><s n="ind"/><s n="sg"/><s n="nom"/></r></p></e>
     <e><p><l>se<s n="prn"/></l><r>še<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>ne<s n="prn"/></l><r>ne<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>minä<s n="prn"/></l><r>mie<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
@@ -443,7 +443,7 @@
     <e><p><l>molemmat<s n="prn"/></l><r>molompi<s n="prn"/></r></p></e>
     <e><p><l>tämä<s n="prn"/></l><r>tämä<s n="prn"/><s n="dem"/></r></p></e>
 
-    <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/><s n="sg"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/></r></p></e>
     <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="pl"/></r></p></e>
 
     <!-- }}}
