@@ -85,6 +85,7 @@
     <sdef n="compound-only-L" c="May only be the left-side of a compound"/>
     <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
     <sdef n="use_blacklist"   c="apertium-fin hacks"/>
+    <sdef n="enc"   c="apertium-fin hacks"/>
   </sdefs>
 
   <!-- }}} -->
@@ -425,7 +426,6 @@
     <e><p><l>toisiinsa<s n="adv"/></l><r>toisihis<s n="adv"/></r></p></e>
     <e><p><l>kuitenkin<s n="adv"/></l><r>kuitenki<s n="adv"/></r></p></e>
     <e><p><l>käsin<s n="adv"/></l><r>käsin<s n="adv"/></r></p></e>
-    <e><p><l>sekin<s n="adv"/></l><r>šeki<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>poikkoseh<s n="adv"/></r></p></e>
 
     <!-- }}}
@@ -435,20 +435,27 @@
     <e><p><l>se<s n="prn"/></l><r>še<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>ne<s n="prn"/></l><r>ne<s n="prn"/><s n="dem"/></r></p></e>
     <e><p><l>minä<s n="prn"/></l><r>mie<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/></l><r>sie<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>hiän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></r></p></e>
     <e><p><l>me<s n="prn"/></l><r>myö<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
+    <e><p><l>te<s n="prn"/></l><r>työ<s n="prn"/><s n="pers"/><s n="p1"/><s n="pl"/></r></p></e>
     <e><p><l>he<s n="prn"/></l><r>hyö<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></r></p></e>
     <e><p><l>itse<s n="prn"/></l><r>iče<s n="prn"/><s n="refl"/></r></p></e>
     <e><p><l>kaikki<s n="prn"/></l><r>kaikki<s n="prn"/><s n="ind"/></r></p></e>
     <e><p><l>molemmat<s n="prn"/></l><r>molompi<s n="prn"/></r></p></e>
     <e><p><l>tämä<s n="prn"/></l><r>tämä<s n="prn"/><s n="dem"/></r></p></e>
 
-    <e><p><l>mikä<s n="prn"/><s n="sg"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/><s n="sg"/><s n="nom"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="sg"/></r></p></e>
     <e><p><l>mikä<s n="prn"/><s n="sp"/></l><r>mi<s n="prn"/><s n="itg"/><s n="pl"/></r></p></e>
 
     <!-- }}}
          {{{ Adpositions -->
 
+    <e><p><l>aikana<s n="post"/></l><r>aikana<s n="post"/></r></p></e>
+    <e><p><l>alta<s n="post"/></l><r>alta<s n="post"/></r></p></e>
+    <e><p><l>edestä<s n="post"/></l><r>ieštä<s n="post"/></r></p></e>
+    <e><p><l>kesken<s n="post"/></l><r>kešen<s n="post"/></r></p></e>
     <e><p><l>luona<s n="post"/></l><r>luona<s n="post"/></r></p></e>
     <e><p><l>alla<s n="post"/></l><r>alla<s n="post"/></r></p></e>
     <e><p><l>kera<s n="post"/></l><r>kera<s n="post"/></r></p></e>
@@ -463,7 +470,6 @@
 
     <e><p><l>vaikka<s n="cnjcoo"/></l><r>vaikka<s n="cnjcoo"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>a<s n="cnjcoo"/></r></p></e>
-    <e><p><l>eikä<s n="cnjcoo"/></l><r>ni<s n="cnjsub"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>ka<s n="cnjcoo"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>ta<s n="cnjcoo"/></r></p></e>
     <e><p><l>tai<s n="cnjcoo"/></l><r>tahi<s n="cnjcoo"/></r></p></e>
@@ -472,12 +478,16 @@
     <e><p><l>jospa<s n="cnjsub"/></l><r>jošpa<s n="cnjsub"/></r></p></e>
     <e><p><l>vaan<s n="cnjsub"/></l><r>kun<s n="cnjsub"/></r></p></e>
 
+    <e><p><l>eikä<s n="adv"/></l><r>ni<s n="cnjsub"/></r></p></e>
+
     <!-- }}}
          {{{ Puncts -->
 
     <e><p><l>-<s n="punct"/></l><r>-<s n="punct"/></r></p></e>
     <e><p><l>–<s n="punct"/></l><r>–<s n="punct"/></r></p></e>
     <e><p><l>.<s n="punct"/></l><r>.<s n="punct"/></r></p></e>
+    <e><p><l>!<s n="punct"/></l><r>!<s n="punct"/></r></p></e>
+    <e><p><l>?<s n="punct"/></l><r>?<s n="punct"/></r></p></e>
     <e><p><l>..<s n="punct"/></l><r>..<s n="punct"/></r></p></e>
     <e><p><l>,<s n="punct"/></l><r>,<s n="punct"/></r></p></e>
     <e><p><l>:<s n="punct"/></l><r>:<s n="punct"/></r></p></e>
@@ -499,6 +509,11 @@
 
     <e><re>[0-9][0-9]*</re><i><s n="num"/></i></e>
     <e><re>[0-9][0-9]*</re><i>.<s n="adj"/></i></e>
+
+    <!-- }}}
+         {{{ clitics -->
+
+    <e><p><l>kin<s n="enc"/></l><r>ki<s n="enc"/></r></p></e>
 
   </section>
 </dictionary>
