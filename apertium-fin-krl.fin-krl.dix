@@ -429,6 +429,21 @@
     <!-- }}}
          {{{ Adjectives -->
 
+    <e><p><l>tuttu<s n="adj"/></l><r>tuttu<s n="adj"/></r></p></e>
+    <e><p><l>sellainen<s n="adj"/></l><r>semmoni<s n="adj"/></r></p></e>
+    <e><p><l>liettualainen<s n="adj"/></l><r>liettualaini<s n="adj"/></r></p></e>
+    <e><p><l>puolalainen<s n="adj"/></l><r>puolalaini<s n="adj"/></r></p></e>
+    <e><p><l>hengellinen<s n="adj"/></l><r>henkellini<s n="adj"/></r></p></e>
+    <e><p><l>nuori<s n="adj"/></l><r>nuori<s n="adj"/></r></p></e>
+    <e><p><l>suunnattu<s n="adj"/></l><r>šuunnattu<s n="adj"/></r></p></e>
+    <e><p><l>yksinäinen<s n="adj"/></l><r>yksinäini<s n="adj"/></r></p></e>
+    <e><p><l>erilainen<s n="adj"/></l><r>erilaini<s n="adj"/></r></p></e>
+    <e><p><l>eri<s n="adj"/></l><r>eri<s n="adj"/></r></p></e>
+    <e><p><l>epävirallinen<s n="adj"/></l><r>epä#virallini<s n="adj"/></r></p></e>
+    <e><p><l>nerokas<s n="adj"/></l><r>nerokaš<s n="adj"/></r></p></e>
+    <e><p><l>mahtava<s n="adj"/></l><r>mahtava<s n="adj"/></r></p></e>
+    <e><p><l>tärkeä<s n="adj"/></l><r>tärkie<s n="adj"/></r></p></e>
+    <e><p><l>keinotekoinen<s n="adj"/></l><r>epä#virallini<s n="adj"/></r></p></e>
     <e><p><l>eeppinen<s n="adj"/></l><r>eeppini<s n="adj"/></r></p></e>
     <e><p><l>ensimmäinen<s n="adj"/></l><r>enšimmäini<s n="adj"/></r></p></e>
     <e><p><l>hieno<s n="adj"/></l><r>hieno<s n="adj"/></r></p></e>
