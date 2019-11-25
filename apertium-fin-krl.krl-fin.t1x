@@ -11,6 +11,8 @@
     <def-cat n="infa">
       <cat-item tags="vblex.inf"/>
       <cat-item tags="vaux.inf"/>
+      <cat-item tags="vblex.inf.*"/>
+      <cat-item tags="vaux.inf.*"/>
     </def-cat>
     <def-cat n="punct">
       <cat-item tags="punct"/>
@@ -97,6 +99,9 @@
         <pattern-item n="infa"/>
       </pattern>
       <action>
+        <call-macro n="infmangler1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="inf" case="caseFirstWord">
             <tags>
