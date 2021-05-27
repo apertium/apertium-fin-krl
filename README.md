@@ -13,7 +13,7 @@ You will need the following software installed:
 * apertium-krl
 
 If this does not make any sense, we recommend you look at:
-http://wiki.apertium.org
+https://wiki.apertium.org
 
 ## Cite as
 
@@ -38,6 +38,6 @@ If you want to cite this work in academic context, please use:
 ## More about apertium
 
 More information about this module, and others can be found on
-the Apertium: Wiki, http://wiki.apertium.org
+the Apertium: Wiki, https://wiki.apertium.org
 
 
