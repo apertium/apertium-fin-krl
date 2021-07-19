@@ -31,3 +31,22 @@ Makefile.in
 # http://www.gnu.org/software/texinfo
 
 /texinfo.tex
+/*.bin
+/*.hfst
+/*.gz
+/*.pc
+/*.zhfst
+/.DS_Store
+/INSTALL
+/Makefile
+/Makefile.in
+/ap_include.am
+/config.log
+/config.status
+/modes
+/*.mode
+/*-*.prob
+/.deps
+/config.in
+/config
+/test/*-output.txt

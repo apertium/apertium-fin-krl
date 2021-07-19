@@ -1,0 +1,10 @@
+{
+    "fin-krl": {
+        "input": "fin-krl-input.txt",
+        "mode": "fin-krl"
+    },
+    "krl-fin": {
+        "input": "krl-fin-input.txt",
+        "mode": "krl-fin"
+    }
+}

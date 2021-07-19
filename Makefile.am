@@ -175,13 +175,7 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "talo" | apertium -d . fin-krl | tee .test-mt
-	@echo "talo" > .test-ref
-	@diff .test-ref .test-mt
-	echo "talo" | apertium -d . krl-fin | tee .test-mt
-	@echo "talo" > .test-ref
-	@diff .test-ref .test-mt
-	@rm .test-ref .test-mt
+	apertium-regtest test
 
 ## apevis gh-pages
 if CAN_SAXON
