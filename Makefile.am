@@ -2,6 +2,8 @@
 ## Makefile for Finnish--Karelian
 ###############################################################################
 
+SUBDIRS=docs
+
 LANG1=fin
 LANG2=krl
 PREFIX1=$(LANG1)-$(LANG2)
@@ -177,107 +179,4 @@ clean-local:
 test: all
 	apertium-regtest test
 
-## apevis gh-pages
-if CAN_SAXON
-LANG1HTML=Finnish
-LANG2HTML=Karelian
-
-bidix2html-split.xslt:
-	wget https://raw.githubusercontent.com/flammie/apevis-xslt/master/$@
-
-bidix2html.xslt:
-	wget https://raw.githubusercontent.com/flammie/apevis-xslt/master/$@
-
-tix2html.xslt:
-	wget https://raw.githubusercontent.com/flammie/apevis-xslt/master/$@
-
-dix2stats.xslt:
-	wget https://raw.githubusercontent.com/flammie/apevis-xslt/master/$@
-
-noinst_DATA+=docs/$(BASENAME).$(PREFIX1).dix.html \
-			 docs/$(BASENAME).$(PREFIX2).dix.html \
-			 docs/$(BASENAME).$(PREFIX1).t1x.html \
-			 docs/$(BASENAME).$(PREFIX1).t2x.html \
-			 docs/$(BASENAME).$(PREFIX1).t3x.html \
-			 docs/$(BASENAME).$(PREFIX2).t1x.html \
-			 docs/$(BASENAME).$(PREFIX2).t2x.html \
-			 docs/$(BASENAME).$(PREFIX2).t3x.html \
-			 docs/statistics.html
-
-docs/$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
-	$(SAXON) -s:$< bidix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-docs/$(BASENAME).$(PREFIX2).dix.html: $(BASENAME).$(PREFIX1).dix bidix2html.xslt
-	$(SAXON) -s:$< bidix2html.xslt from=$(LANG2HTML) to=$(LANG1HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  invert=true > $@
-
-docs/$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
-
-docs/$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
-
-
-
-docs/$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
-
-docs/$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
-
-docs/$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2)  > $@
-
-docs/$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x tix2html.xslt
-	$(SAXON) -s:$< tix2html.xslt  from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX1).dix.html: $(BASENAME).$(PREFIX1).dix dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX1).t1x.html: $(BASENAME).$(PREFIX1).t1x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX2).t1x.html: $(BASENAME).$(PREFIX2).t1x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX1).t2x.html: $(BASENAME).$(PREFIX1).t2x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX2).t2x.html: $(BASENAME).$(PREFIX2).t2x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX1).t3x.html: $(BASENAME).$(PREFIX1).t3x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/stats-$(BASENAME).$(PREFIX2).t3x.html: $(BASENAME).$(PREFIX2).t3x dix2stats.xslt
-	$(SAXON) -s:$< dix2stats.xslt from=$(LANG1HTML) to=$(LANG2HTML) pair=$(PREFIX1) antipair=$(PREFIX2) > $@
-
-docs/statistics.html: docs/stats-$(BASENAME).$(PREFIX1).dix.html \
-				 docs/stats-$(BASENAME).$(PREFIX1).t1x.html \
-				 docs/stats-$(BASENAME).$(PREFIX2).t1x.html \
-				 docs/stats-$(BASENAME).$(PREFIX1).t2x.html \
-				 docs/stats-$(BASENAME).$(PREFIX2).t2x.html \
-				 docs/stats-$(BASENAME).$(PREFIX1).t3x.html \
-				 docs/stats-$(BASENAME).$(PREFIX2).t3x.html
-	$(AWK) '/DOCTYPE/,/<\/h1>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).dix.html > $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).dix.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).t1x.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).t2x.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).t3x.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX2).t1x.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX2).t2x.html | fgrep -v '</div>' >> $@
-	$(AWK) '/<h2>/,/<\/div>/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX2).t3x.html | fgrep -v '</div>' >> $@
-	echo '</div><div class="row">' >> $@
-	$(AWK) '/<div id="footer"/,/<\/html/ {print;}' < \
-		docs/stats-$(BASENAME).$(PREFIX1).dix.html | fgrep -v '</div>' >> $@
-
-
-
-endif
 

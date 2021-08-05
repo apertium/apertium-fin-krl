@@ -43,5 +43,5 @@ PKG_CHECK_MODULES(REGTEST, apertium-regtest >= 0.0.1, [],
 
 AP_MKINCLUDE
 
-AC_OUTPUT([Makefile])
+AC_OUTPUT([Makefile docs/Makefile])
 
