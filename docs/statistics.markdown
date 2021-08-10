@@ -13,11 +13,11 @@ There are 62 symbols in this dictionary.
   
 ### Tags (Multichar Symbols)
     
-There are 68 symbols in this dictionary.
+There are 70 symbols in this dictionary.
   
 ### Dictionary mainstandard
 
-There are 1453 words in the dictionary part
+There are 2297 words in the dictionary part
 main.
   
 
