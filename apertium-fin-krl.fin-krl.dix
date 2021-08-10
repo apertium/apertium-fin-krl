@@ -10,7 +10,9 @@
     <sdef n="vaux"            c="AUX"/>
     <sdef n="cnjsub"          c="SCONJ"/>
     <sdef n="cnjcoo"          c="CCONJ"/>
+    <sdef n="cnjadv"          c="ADVCONJ"/>
     <sdef n="post"            c="ADP"/>
+    <sdef n="pr"            c="ADP"/>
     <sdef n="adv"             c="ADV"/>
     <sdef n="ij"              c="INTJ"/>
     <sdef n="adj"             c="ADJ"/>
